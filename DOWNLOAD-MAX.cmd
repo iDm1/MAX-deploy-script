@@ -28,7 +28,7 @@ COLOR 0A
 ECHO.
 ECHO  Готово! Выход через 3 секунды...
 TIMEOUT /T 3 >NUL
-EXIT 0
+EXIT /B 0
 
 :error
 TITLE %TITLE% - Ошибка!
@@ -37,4 +37,4 @@ COLOR 0C
 ECHO.
 ECHO  Ошибка! Выход через 3 секунды...
 TIMEOUT /T 3 >NUL
-EXIT 0
+EXIT /B 1
