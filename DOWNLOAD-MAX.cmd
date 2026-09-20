@@ -17,7 +17,7 @@ ECHO %TITLE%
 
 ECHO.
 CD /D "%TEMP%"
-POWERSHELL.EXE -Command "Invoke-WebRequest -Uri '%SOURCE%' -OutFile '%TEMPFILE%'"
+POWERSHELL.EXE -NoProfile -Command "Invoke-WebRequest -Uri '%SOURCE%' -OutFile '%TEMPFILE%'"
 IF ERRORLEVEL 1 GOTO :error
 MOVE /Y "%TEMPFILE%" "%TARGET%"
 
